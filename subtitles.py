@@ -16,7 +16,7 @@ first_step = text.readlines()
 # 新建一个字幕文件
 new_file = open('C:\\Users\\18506\\Desktop\\处理版.srt', 'w')
 
-# 建立4000后的字典
+# 建立4000后的字典,可以根据个人需要更改
 wordlist4001 = {}
 excel_content = openpyxl.load_workbook('COCA20000增强版.xlsx')
 sheet = excel_content['Sheet1']
