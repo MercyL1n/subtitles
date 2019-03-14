@@ -1,7 +1,7 @@
 import re
 import openpyxl
 
-# 读入字幕文件
+# 读入字幕文件,注意要是srt类型
 text = open('The.Big.Bang.Theory.S11E09.720p.HDTV.x264-AVS.chs.eng.简体&英文.srt', 'r')
 
 # 空行、行数标号正则表达式
@@ -14,9 +14,9 @@ rgx_time = re.compile(r'\d\d:\d\d:\d\d,\d\d\d --> \d\d:\d\d:\d\d,\d\d\d\n')
 first_step = text.readlines()
 
 # 新建一个字幕文件
-new_file = open('C:\\Users\\18506\\Desktop\\处理版.srt', 'w')
+new_file = open('C:\\Users\\18506\\Desktop\\subtitles.srt', 'w')
 
-# 建立4000后的字典,可以根据个人需要更改
+# 建立4000后的字典,可以根据个人需要更改,Sheet1,(row,2)等参数根据实际需求填写
 wordlist4001 = {}
 excel_content = openpyxl.load_workbook('COCA20000增强版.xlsx')
 sheet = excel_content['Sheet1']
